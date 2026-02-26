@@ -1,14 +1,16 @@
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: 400px 400px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: auto auto auto 1fr auto;
     gap: 1em;
+    
 }
 .card {
     display: grid;
     grid-template-rows: subgrid;
-    border: solid 2px black;
-    max-width: 300px;
+    grid-row: span 5;
+    min-width: 320px;
+    max-width: 350px;
     text-align: center;
 }
 .card:hover {
@@ -16,29 +18,105 @@
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
+
+.image {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 .img {
     display: block;
     width: 100%;
     height: auto;
 }
+
+.img__wrapper {
+    position: relative;
+}
+
+.estitek {
+ position: absolute;   
+ top: 0;
+ left: 0;
+}
+
 .card__product {
     text-align: center;
     margin: 0;
     text-decoration: none;
     display: inline-block;
     color: black;
+    margin: 1em 2em;
 }
 
+.stars__textbox {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+.rating__box {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    
+}
+
+.rating {
+  text-decoration: none;  
+  align-content: center;
+}
+
+.ratingValue {
+    font-weight: bold;
+    color: navy;
+}
+
+.ratingValueCount {
+    color: gray;
+    text-decoration: underline;
+}
+.discount {
+
+}
+.discount--active {
+    min-height: 43px;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+    border: dashed 3px black;
+}
+
+.discount__percent {
+background-color: red;
+font-weight: bold;
+color: white;
+padding: 2px;
+}
+
+.discount__price {
+color: red;
+}
+
+.discount__text {
+color: green;
+text-decoration: underline;
+}
 
 .card__textbox {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1em;
 }
 
 .price {
     display: inline-block;
-    margin-top: 1em;
     align-self: center;
     text-decoration: none;
     color: red;
@@ -49,11 +127,9 @@
 
 .btn {
     display: inline-block;
-    margin-bottom: 1em;
     background-color: green;
     align-self: center;
     padding: 0.5em 1em;
     color: white;
     text-decoration: none;
 }
-
