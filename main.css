@@ -51,6 +51,10 @@
     margin: 1em 2em;
 }
 
+.card__product:hover {
+    text-decoration: underline;
+}
+
 .product__name {
     text-decoration: none;
 }
