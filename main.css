@@ -11,8 +11,8 @@
     grid-row: span 5;
     min-width: 320px;
     max-width: 350px;
-    text-align: center;
     background-color: white;
+
 }
 .card:hover {
       border-color: #888;
@@ -36,10 +36,10 @@
     position: relative;
 }
 
-.estitek {
- position: absolute;   
- top: 0;
- left: 0;
+.absolute {
+    position: absolute;   
+    top: 0;
+    left: 0;
 }
 
 .card__product {
@@ -84,9 +84,6 @@
     color: gray;
     text-decoration: underline;
 }
-.discount {
-
-}
 .discount--active {
     min-height: 43px;
     display: flex;
@@ -115,7 +112,6 @@ text-decoration: underline;
 .card__textbox {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 1em;
 }
 
